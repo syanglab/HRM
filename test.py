@@ -35,19 +35,17 @@ class Test(object):
         settings.write_to_log('Epoch %i' % e)
         df = self.build_df(self.gen_curves(model_g), model_d)        
         df = self.clear_incomp(df)
-        self.element_comp_dist(df)
-        self.element_comp_disc(df)
+        self.element_comp_dist(df, e)
+        self.element_comp_disc(df, e)
 
-        acc_dist = self.all_el_comp_dist(df)
+        acc_dist = self.all_el_comp_dist(df, e)
         print(acc_dist)
-        acc_disc = self.all_el_comp_disc(df)
+        acc_disc = self.all_el_comp_disc(df, e)
         print(acc_disc)
         avg_dist, avg_disc = self.get_avg_dist_disc(df)
         print(avg_dist)
-        self.check_improv(acc_dist,
-                     acc_disc,
-                     avg_dist,
-                     avg_disc)
+        print(avg_disc)
+        #self.check_improv(acc_dist, acc_disc, avg_dist, avg_disc)
 
     def check_improv(self, acc_dist, acc_disc, avg_dist, avg_disc):
         '''
@@ -89,12 +87,13 @@ class Test(object):
         
         return mn_dist, mn_disc
             
-    def all_el_comp_dist(self, df):
+    def all_el_comp_dist(self, df, e):
         '''
         get an accuracy using all elements for distance
         '''        
         #Get the avg values        
         df_avg = df.groupby(['orgs_A','orgs_B']).dists.mean().reset_index()
+        df_avg.to_csv("/output/avg_dist_comp_%i.csv" % e, index = False)
         df_avg = df_avg.loc[df_avg.groupby('orgs_A').dists.idxmin()]
         avg_acc = accuracy_score(df_avg.orgs_A, df_avg.orgs_B)
         settings.write_to_log('dist_met')
@@ -102,12 +101,13 @@ class Test(object):
         
         return avg_acc
         
-    def all_el_comp_disc(self, df):
+    def all_el_comp_disc(self, df, e):
         '''
         get an accuracy using all elements for distance
         '''        
         #Get the avg values        
         df_avg = df.groupby(['orgs_A','orgs_B']).disc.mean().reset_index()
+        df_avg.to_csv("/output/avg_disc_comp_%i.csv" % e, index = False)
         df_avg = df_avg.loc[df_avg.groupby('orgs_A').disc.idxmax()]
         avg_acc = accuracy_score(df_avg.orgs_A, df_avg.orgs_B)
         settings.write_to_log('disc_met')
@@ -115,22 +115,24 @@ class Test(object):
         
         return avg_acc        
             
-    def element_comp_dist(self,df):
+    def element_comp_dist(self, df, e):
         '''
         get an accurcy by element for the distance metric
         '''
         #Use the distance metric
         df_grp = df.groupby(['orgs_A','orgs_B', 'els']).dists.mean().reset_index()
+        df_grp.to_csv("/output/element_dist_comp_%i.csv" % e, index = False)
         settings.write_to_log('dist_met')
         self.output_el_vals(df_grp.groupby(['orgs_A', 'els']).min().reset_index())
 
         
-    def element_comp_disc(self,df):
+    def element_comp_disc(self, df, e):
         '''
         get an accurcy by element for the two discrim metric
         '''        
         #Use the discriminator
         df_grp = df.groupby(['orgs_A','orgs_B', 'els']).disc.mean().reset_index()
+        df_grp.to_csv("/output/element_disc_comp_%i.csv" % e, index = False)
         settings.write_to_log('disc_met')
         self.output_el_vals(df_grp.groupby(['orgs_A', 'els']).max().reset_index())
 
@@ -171,8 +173,10 @@ class Test(object):
                     dat['els'].append(self.test_tags[i].split("_")[1])
                     #Find dist
                     dat['dists'].append(curve_manip.calc_distance(gen_curves[i], self.ref_curves[j]))
-                    #Find discriminator call                    
-                    dat['disc'].append(float(model_d.predict([[self.test_curves[i]], [self.ref_seqs[j]]])))
+                    #Find discriminator call 
+                    g = np.array([self.test_curves[i]])
+                    s = np.array([self.ref_seqs[j]])
+                    dat['disc'].append(float(model_d.predict([g, s])))
                     
         return pd.DataFrame(dat)
         

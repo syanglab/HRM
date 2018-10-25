@@ -9,7 +9,7 @@ from train import Train
 from test import Test
 import random
 import settings
-
+import pickle
 
 def split_orgs(tags):
     '''
@@ -37,7 +37,9 @@ def main():
     '''
     Run the program
     '''
-    dat = PreProc()
+    filename = '/my_data/dat_r_l.pkl'
+    filehandler = open(filename, 'rb')
+    dat = pickle.load(filehandler)
     
     test_ind, train_ind = split_orgs(dat.tags)
     train = Train(dat.seqs[train_ind],
@@ -52,11 +54,13 @@ def main():
                 dat.tags[train_ind])
     
     for e in range(settings.epochs):
-        print(e)
+        
         train.train_gan(e)
         if e%settings.chkpt == 0:
             #Save the model
-            train.model.generator.save('%s_%i.h5' % (settings.fl_nms['model'], e))
+            train.model.generator.save('/output/gen_model_%i.h5' % e)
+            train.model.discriminator.save('/output/disc_model_%i.h5' % e)
+            
             test.test_model(train.model.generator, train.model.discriminator, e)
 
 if __name__ == "__main__":

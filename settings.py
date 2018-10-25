@@ -11,12 +11,12 @@ Created on Sat Aug 25 14:29:44 2018
 
 #Map for all file_names
 fl_nms = {
-        'log':'log.txt',
-        'f_crv':'C:\\Users\\cogillsb\\Desktop\\HRM_pred_net\\data\\curves_cln.csv',
-        'model':'model_test',
+        'log':'/output/log.txt',
+        'f_crv':'../data/curves_cln.csv',
+        'model_gen':'/output/model_gen',
         }
 fld_nms = {
-        'loc_folder':'C:\\Users\\cogillsb\\Desktop\\HRM_pred_net\\data\\all_primer_blast_output\*'
+        'loc_folder':'../data/all_primer_blast_output/*'
         }
 #Network settings
 net = {}
@@ -38,8 +38,8 @@ stddev = 0.02
 
 #General
 seed = 42
-test_percent = 0.33
-chkpt = 5
+test_percent = 0.10
+chkpt = 5000
 batch_size = 50
 
 height_noise = 0.05

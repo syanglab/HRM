@@ -6,13 +6,14 @@ Created on Sun Sep  9 18:37:06 2018
 """
 
 from Bio import Entrez
+from Bio.Seq import Seq
 from glob import glob
 import numpy as np
 import settings
 import os
 import pandas as pd
 import curve_manip
-
+import pickle
 Entrez.email = settings.entrez_email
 
 class PreProc(object):
@@ -32,7 +33,15 @@ class PreProc(object):
         'Y':[0,0.5,0.5,0],
         'R':[0.5,0,0,0.5],
         }
+        self.labeling = {
+            '16S':[1,0,0],
+            '23S':[0,1,0],
+            'ITS':[0,0,1]
+                }
         self.build_seq_dic()
+        filename = '../data/seq_dic.pkl'
+        filehandler = open(filename, 'wb')
+        pickle.dump(self.seq_dic, filehandler)
         self.encode_seqs()
         self.build_dat()
         self.numpy_convert()
@@ -76,9 +85,16 @@ class PreProc(object):
         Fetch sequences from database and 
         add them to the seq_dic
         '''
+        rtag = tag + "_r"
         if tag not in self.seq_dic.keys():
             self.seq_dic[tag] = []
+        
+        if rtag not in self.seq_dic.keys():
+            self.seq_dic[rtag] = []
+            
         for c in coords:
+            if (max(c)-min(c))>1500:
+                continue
             #Check strand
             strand = 1 if min(c) == c[0] else 2
             #Fetch seq
@@ -94,6 +110,10 @@ class PreProc(object):
             seq = ''.join(seq.split('\n')[1:])
             self.max_len = len(seq) if len(seq) > self.max_len else self.max_len
             self.seq_dic[tag].append(seq)
+            
+            #add rev_comp
+            rseq = str(Seq(seq).reverse_complement())
+            self.seq_dic[rtag].append(rseq)
     
     def encode_seqs(self):
         '''
@@ -113,7 +133,8 @@ class PreProc(object):
             if settings.skp_tht:
                 emb_seqs = self.skp_tht(emb_seqs)
             #Update the overall data structure
-            self.seq_dic[k] = np.average(emb_seqs, axis=0)   
+            label = self.labeling[k.split('_')[1]]
+            self.seq_dic[k] = np.concatenate((label, np.average(emb_seqs, axis=0)))
             
     def build_dat(self):
         '''
@@ -125,6 +146,11 @@ class PreProc(object):
             if tag in self.seq_dic.keys():
                 self.tags.append(tag)
                 self.seqs.append(self.seq_dic[tag])
+                self.curves.append(list(r)[1:])
+                #rev
+                rtag = tag + "_r"
+                self.tags.append(rtag)
+                self.seqs.append(self.seq_dic[rtag])
                 self.curves.append(list(r)[1:])
     
     def norm_curves(self):

@@ -13,6 +13,10 @@ import settings
 import keras.backend as K
 from keras.layers import Conv2DTranspose
 
+
+
+
+
 class GANModel(object):
     
     def __init__(self, curve_len, seq_len):
@@ -25,13 +29,11 @@ class GANModel(object):
         self.curve_len = curve_len
         self.seq_len = seq_len        
         self.adam = Adam(lr=0.0002, beta_1=0.5)        
-        self.generator = self.build_generator()
-        self.generator.compile(loss='binary_crossentropy', optimizer=self.adam)
+        self.generator = self.build_generator()        
         self.discriminator=self.build_discriminator()
-        self.discriminator.compile(loss='binary_crossentropy', optimizer=self.adam)
-        self.gan = self.build_gan()
-        self.gan.compile(loss='binary_crossentropy', optimizer=self.adam)
+        
 
+              
 
     def Conv1DTranspose(self, input_tensor, filters, kernel_size, strides=2, padding='same'):
         x = Lambda(lambda x: K.expand_dims(x, axis=2))(input_tensor)
@@ -103,29 +105,23 @@ class GANModel(object):
         depth = 64
         
         for i in range(4):
-            encoder = Conv1D(depth, 5, strides=2, padding='same')(encoder)
-            encoder = BatchNormalization(momentum=self.mom)(encoder)
+            encoder = Conv1D(depth, 5, strides=2, padding='same', kernel_initializer='he_normal')(encoder)
+            #encoder = BatchNormalization(momentum=self.mom)(encoder)
             encoder = LeakyReLU(alpha=self.lk_rl)(encoder)
     
         encoder = Flatten()(encoder)
         encoder = concatenate([encoder, label])        
-        encoder = Dense(512, activation='relu')(encoder)
-        encoder = Dropout(self.drp)(encoder)  
+        encoder = Dense(512, activation='relu', kernel_initializer='he_normal')(encoder)
+        encoder = LeakyReLU(alpha=self.lk_rl)(encoder)
+        #encoder = Dropout(self.drp)(encoder)  
         
-        output = Dense(1, activation='sigmoid')(encoder)        
+        output = Dense(1, kernel_initializer='he_normal')(encoder)        
         
-        return Model(input = [img_in, label_in], output = output,)
+        return Model(inputs = [img_in, label_in], outputs = output,)
         
    
-     
-    def build_gan(self):
-        # Combined network
-        self.discriminator.trainable = False
-        noise = Input(shape=(self.random_dim,))
-        label_in = Input(shape=(self.seq_len,))        
-        
-        img =self.generator([noise, label_in])
-        ganOutput = self.discriminator([img, label_in])
-        
-        return Model(inputs=[noise, label_in], outputs=ganOutput)
+    
+    
+    
+
     
