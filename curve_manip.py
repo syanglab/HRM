@@ -46,8 +46,9 @@ def smooth_curves(curves):
     '''
     Loop for smooth method
     '''
-    for i in range(curves.shape[0]):
-        curves[i]= smooth(curves[i])[:-10]
+    for it in range(settings.smoothing):
+        for i in range(curves.shape[0]):
+            curves[i]= smooth(curves[i])[:-10]
     return curves
     
 
@@ -64,10 +65,14 @@ def norm_curve(curve_array):
     '''
     Putting all of the normalization steps together. 
     '''
+    '''
+    Putting all of the normalization steps together. 
+    '''
     curve_array = curve_array[:,settings.curve_start:]
     curve_array = detrend_array(curve_array)
     minmax_scale = MinMaxScaler(feature_range=(-1, 1)).fit(curve_array.T)
     curve_array=minmax_scale.transform(curve_array.T).T
+    curve_array = smooth_curves(curve_array)
     
     return curve_array
 

@@ -150,8 +150,8 @@ class Test(object):
         Use the generator to predict curves
         '''
         #Generate predicted images
-        noise = np.random.normal(0, 1, size=[self.test_seqs.shape[0], settings.random_dim])
-        gen_imgs = model_g.predict([noise,  self.test_seqs])
+        #noise = np.random.normal(0, 1, size=[self.test_seqs.shape[0], settings.random_dim])
+        gen_imgs = model_g.predict([self.test_seqs])
         
         return curve_manip.smooth_curves(gen_imgs)
 

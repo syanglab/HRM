@@ -4,7 +4,7 @@ Created on Wed Aug 29 11:29:13 2018
 
 @author: cogillsb
 """
-from model_simple import GANModel
+from model_ae import GANModel
 import numpy as np
 import settings 
 import random
@@ -23,37 +23,52 @@ class Train(object):
         '''
         Run an epoch for model.
         '''
-        random.shuffle(list(self.idx))
         
+        flip, odd = self.check_swicthes(e)
+        flip = False
+        odd = True
+        #train discriminator
+        self.model.discriminator.trainable = True
+        #for i in range(5):
+        random.shuffle(self.idx)
+        for i in range(1, int(self.curves.shape[0]/settings.batch_size)+1):                    
+            #Get a batch
+            start = i*settings.batch_size-settings.batch_size
+            stop = i*settings.batch_size
+            idx = self.idx[start:stop]
+            #Get disc data
+            labels = self.seqs[idx]
+            generated_images = self.model.generator.predict([labels])
+            X = np.concatenate([self.curves[idx], self.curves[idx], generated_images])
+            seqs_batch = np.concatenate([labels, self.seqs[self.get_wrong_seqs(idx)], labels]) 
+            y_dis = np.zeros(3*settings.batch_size)
+            dbl_bs = 2*settings.batch_size
+            if flip:
+                #Swap discriminator labels
+                y_dis[settings.batch_size:]=np.array(np.random.randint(700, 1200, dbl_bs)/1000)
+                y_dis[:settings.batch_size]=np.array(np.random.randint(0, 300, settings.batch_size)/1000)
+                           
+            else:
+                y_dis[settings.batch_size:]=np.array(np.random.randint(0, 300, dbl_bs)/1000)
+                y_dis[:settings.batch_size]=np.array(np.random.randint(700, 1200, settings.batch_size)/1000)
+            
+            dloss = self.model.discriminator.train_on_batch([X,seqs_batch], y_dis)        
+            
+            self.dloss = dloss
+        
+        #Train generator
+        self.model.discriminator.trainable = False
+        random.shuffle(self.idx)
         for i in range(1, int(self.curves.shape[0]/settings.batch_size)+1):
             start = i*settings.batch_size-settings.batch_size
             stop = i*settings.batch_size
-            idx = self.idx[start:stop]            
-            widx = self.get_wrong_seqs(idx)
-
-            #Train discriminator
-            self.model.discriminator.trainable = True
-            noise = np.random.rand(settings.batch_size, self.random_dim)
-            labels = self.seqs[idx]
-            gen_imgs = self.model.generator.predict([noise,  labels])
-            dloss = self.model.critic.train_on_batch(
-                    [self.curves[idx], gen_imgs, labels],
-                    [np.ones(settings.batch_size), -np.ones(settings.batch_size), np.zeros(settings.batch_size)])
-            
-            #Train discriminator with wrong seqs
-            labels = self.seqs[widx]
-            dloss = self.model.critic.train_on_batch(
-                    [self.curves[idx], self.curves[idx], labels],
-                    [np.ones(settings.batch_size), -np.ones(settings.batch_size), np.zeros(settings.batch_size)])
-            
-            
-            self.dloss = dloss
-            #Train generator
-            self.model.discriminator.trainable = False
-            gloss = self.model.gan.train_on_batch(
-                    self.sample_dat(idx),
-                    np.ones(settings.batch_size))        
+            idx = self.idx[start:stop]
+            if odd:
+                gloss = self.model.gan.train_on_batch(self.seqs[idx], np.ones(settings.batch_size))
+            else:
+                gloss = self.model.gan.train_on_batch(self.seqs[idx], np.zeros(settings.batch_size))
             self.gloss=gloss
+            
         #Output quick performance check
         if e%settings.chkpt == 0:
             print(e)
@@ -90,6 +105,21 @@ class Train(object):
         
         return [noise, seqs_batch]
     
+    def check_swicthes(self, e):
+        '''
+        Check points for challenges to network. 
+        '''
+        if e%50 ==0 and e%settings.chkpt != 0:
+            flip = True
+        else:
+            flip = False
+            
+        if e%2 != 0:
+            odd = True
+        else:
+            odd = False            
+           
+        return flip, odd
     
 
    

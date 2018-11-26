@@ -75,10 +75,10 @@ class GANModel(object):
         decoder = LeakyReLU(alpha=self.lk_rl)(decoder)       
         decoder = Dropout(self.drp)(decoder)
         
-        decoder = Dense(1024)(decoder) 
+        decoder = Dense(self.curve_len)(decoder) 
         decoder = LeakyReLU(alpha=self.lk_rl)(decoder)       
         output = Dropout(self.drp)(decoder)
-        output = Dense(1024, activation='tanh')(decoder)       
+        output = Dense(self.curve_len, activation='tanh')(decoder)       
         
         return Model(inputs=[noise_in, label_in], outputs=output)
     

@@ -30,6 +30,8 @@ lbl_lyrs = [1024, 512, 256, 128]
 dec_lyrs = [256, 512, 1024]
 enc_lyrs = [1024, 512, 256, 128]
 
+smoothing = 2
+
 #Params
 dropout = 0.3
 momentum = 0.8
@@ -39,14 +41,14 @@ stddev = 0.02
 #General
 seed = 42
 test_percent = 0.10
-chkpt = 5000
+chkpt = 3000
 batch_size = 50
 
 height_noise = 0.05
 width_noise = 5
 
 #Curve stuff
-curve_start = 324
+curve_start = 548
 
 #Entrez
 entrez_email = 'cogillsb@Stanford.edu'

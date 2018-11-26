@@ -10,6 +10,7 @@ from test import Test
 import random
 import settings
 import pickle
+from ppwseqs import PreProcwSeqs
 
 def split_orgs(tags):
     '''
@@ -37,7 +38,7 @@ def main():
     '''
     Run the program
     '''
-    filename = '/my_data/dat_r_l.pkl'
+    filename = '/my_data/dat_16s_glblalgn_parse_curve_norm.pkl'
     filehandler = open(filename, 'rb')
     dat = pickle.load(filehandler)
     
