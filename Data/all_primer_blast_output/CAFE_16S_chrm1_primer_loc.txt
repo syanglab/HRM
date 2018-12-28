@@ -1,0 +1,24 @@
+>NZ_LS483431.1 Campylobacter fetus subsp. fetus strain NCTC10842 genome assembly, chromosome: 1
+
+product length = 949
+Forward primer  1       GNGGCGNACGGGTGAGTAA  19
+Template        133793  .T....C............  133811
+
+Reverse primer  1       AGCTGACGACANCCATGCA  19
+Template        134741  ...........G..G....  134723
+
+
+product length = 949
+Forward primer  1       GNGGCGNACGGGTGAGTAA  19
+Template        501647  .T....C............  501665
+
+Reverse primer  1       AGCTGACGACANCCATGCA  19
+Template        502595  ...........G..G....  502577
+
+
+product length = 949
+Forward primer  1       GNGGCGNACGGGTGAGTAA  19
+Template        597384  .T....C............  597402
+
+Reverse primer  1       AGCTGACGACANCCATGCA  19
+Template        598332  ...........G..G....  598314

@@ -1,0 +1,8 @@
+>NC_006348.1 Burkholderia mallei ATCC 23344 chromosome 1, complete sequence
+
+product length = 1150
+Forward primer  1        NGCGTAANAGCTCAC  15
+Template        2674620  A......T.......  2674606
+
+Reverse primer  1        ACCGCCCCAGTNAAACN  17
+Template        2673471  ...........C....T  2673487

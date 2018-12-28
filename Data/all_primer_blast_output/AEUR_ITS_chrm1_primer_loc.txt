@@ -1,0 +1,32 @@
+>NZ_CP014161.1 Aerococcus urinae strain CCUG36881, complete genome
+
+product length = 620
+Forward primer  1      TTGTACACACCGCCCG  16
+Template        10612  ................  10627
+
+Reverse primer  1      NGCCAAGGCATCCACC  16
+Template        11231  T..........T....  11216
+
+
+product length = 619
+Forward primer  1       TTGTACACACCGCCCG  16
+Template        735293  ................  735308
+
+Reverse primer  1       NGCCAAGGCATCCACC  16
+Template        735911  T..........T....  735896
+
+
+product length = 401
+Forward primer  1        TTGTACACACCGCCCG  16
+Template        1443377  ................  1443362
+
+Reverse primer  1        NGCCAAGGCATCCACC  16
+Template        1442977  T..........T....  1442992
+
+
+product length = 401
+Forward primer  1        TTGTACACACCGCCCG  16
+Template        1569606  ................  1569591
+
+Reverse primer  1        NGCCAAGGCATCCACC  16
+Template        1569206  T..........T....  1569221

@@ -1,0 +1,9 @@
+>NZ_CP007701.1 Brucella abortus strain NCTC 10505 chromosome 2 sequence
+
+product length = 958
+Forward primer  1       TTGTACACACCGCCCG  16
+Template        900566  ................  900551
+
+Reverse primer  1       NGCCAAGGCATCCACC  16
+Template        899609  T...............  899624
+

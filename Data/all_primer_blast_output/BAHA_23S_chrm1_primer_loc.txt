@@ -1,0 +1,64 @@
+>NC_002570.2 Bacillus halodurans C-125 DNA, complete genome
+
+product length = 1161
+Forward primer  1      NGCGTAANAGCTCAC  15
+Template        26189  T......T.......  26203
+
+Reverse primer  1      ACCGCCCCAGTNAAACN  17
+Template        27349  ...........C....T  27333
+
+
+product length = 1161
+Forward primer  1      NGCGTAANAGCTCAC  15
+Template        54126  T......T.......  54140
+
+Reverse primer  1      ACCGCCCCAGTNAAACN  17
+Template        55286  ...........C....T  55270
+
+
+product length = 1161
+Forward primer  1       NGCGTAANAGCTCAC  15
+Template        121059  T......T.......  121073
+
+Reverse primer  1       ACCGCCCCAGTNAAACN  17
+Template        122219  ...........C....T  122203
+
+
+product length = 1161
+Forward primer  1       NGCGTAANAGCTCAC  15
+Template        127888  T......T.......  127902
+
+Reverse primer  1       ACCGCCCCAGTNAAACN  17
+Template        129048  ...........C....T  129032
+
+
+product length = 1161
+Forward primer  1       NGCGTAANAGCTCAC  15
+Template        265298  T......T.......  265312
+
+Reverse primer  1       ACCGCCCCAGTNAAACN  17
+Template        266458  ...........C....T  266442
+
+
+product length = 1161
+Forward primer  1       NGCGTAANAGCTCAC  15
+Template        562657  T......T.......  562671
+
+Reverse primer  1       ACCGCCCCAGTNAAACN  17
+Template        563817  ...........C....T  563801
+
+
+product length = 1161
+Forward primer  1       NGCGTAANAGCTCAC  15
+Template        659855  T......T.......  659869
+
+Reverse primer  1       ACCGCCCCAGTNAAACN  17
+Template        661015  ...........C....T  660999
+
+
+product length = 1161
+Forward primer  1        NGCGTAANAGCTCAC  15
+Template        1021460  T......T.......  1021474
+
+Reverse primer  1        ACCGCCCCAGTNAAACN  17
+Template        1022620  ...........C....T  1022604

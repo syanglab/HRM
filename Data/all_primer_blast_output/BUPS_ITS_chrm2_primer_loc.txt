@@ -1,0 +1,10 @@
+>NZ_CP004002.1 Burkholderia pseudomallei NCTC 13178 chromosome 2, complete sequence
+
+product length = 834
+Forward primer  1       TTGTACACACCGCCCG  16
+Template        647955  ................  647970
+
+Reverse primer  1       NGCCAAGGCATCCACC  16
+Template        648788  C...............  648773
+
+

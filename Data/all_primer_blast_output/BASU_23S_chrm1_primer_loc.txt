@@ -1,0 +1,57 @@
+>NZ_CP009748.1 Bacillus subtilis strain ATCC 13952, complete genome
+
+product length = 1152
+Forward primer  1      NGCGTAANAGCTCAC  15
+Template        12800  T......T.......  12814
+
+Reverse primer  1      ACCGCCCCAGTNAAACN  17
+Template        13951  ...........C....T  13935
+
+
+product length = 1152
+Forward primer  1      NGCGTAANAGCTCAC  15
+Template        34540  T......T.......  34554
+
+Reverse primer  1      ACCGCCCCAGTNAAACN  17
+Template        35691  ...........C....T  35675
+
+
+product length = 1152
+Forward primer  1      NGCGTAANAGCTCAC  15
+Template        94380  T......T.......  94394
+
+Reverse primer  1      ACCGCCCCAGTNAAACN  17
+Template        95531  ...........C....T  95515
+
+
+product length = 1152
+Forward primer  1       NGCGTAANAGCTCAC  15
+Template        158565  T......T.......  158579
+
+Reverse primer  1       ACCGCCCCAGTNAAACN  17
+Template        159716  ...........C....T  159700
+
+
+product length = 1152
+Forward primer  1       NGCGTAANAGCTCAC  15
+Template        553199  T......T.......  553213
+
+Reverse primer  1       ACCGCCCCAGTNAAACN  17
+Template        554350  ...........C....T  554334
+
+
+product length = 1152
+Forward primer  1       NGCGTAANAGCTCAC  15
+Template        831384  T......T.......  831398
+
+Reverse primer  1       ACCGCCCCAGTNAAACN  17
+Template        832535  ...........C....T  832519
+
+
+product length = 1152
+Forward primer  1        NGCGTAANAGCTCAC  15
+Template        2888577  T......T.......  2888563
+
+Reverse primer  1        ACCGCCCCAGTNAAACN  17
+Template        2887426  ...........C....T  2887442
+

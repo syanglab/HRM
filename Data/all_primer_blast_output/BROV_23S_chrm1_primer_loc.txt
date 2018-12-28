@@ -1,0 +1,16 @@
+>NC_009505.1 Brucella ovis ATCC 25840 chromosome I, complete sequence
+
+product length = 1040
+Forward primer  1        NGCGTAANAGCTCAC  15
+Template        1594478  A......C.......  1594464
+
+Reverse primer  1        ACCGCCCCAGTNAAACN  17
+Template        1593439  ...........C....T  1593455
+
+
+product length = 1040
+Forward primer  1        NGCGTAANAGCTCAC  15
+Template        1795628  A......C.......  1795614
+
+Reverse primer  1        ACCGCCCCAGTNAAACN  17
+Template        1794589  ...........C....T  1794605

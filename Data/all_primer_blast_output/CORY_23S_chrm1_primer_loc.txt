@@ -1,0 +1,24 @@
+>NC_007164.1 Corynebacterium jeikeium K411 complete genome
+
+product length = 1263
+Forward primer  1       NGCGTAANAGCTCAC  15
+Template        111806  T......T.......  111820
+
+Reverse primer  1       ACCGCCCCAGTNAAACN  17
+Template        113068  ...........T....T  113052
+
+
+product length = 1263
+Forward primer  1       NGCGTAANAGCTCAC  15
+Template        475886  T......T.......  475900
+
+Reverse primer  1       ACCGCCCCAGTNAAACN  17
+Template        477148  ...........T....T  477132
+
+
+product length = 1263
+Forward primer  1        NGCGTAANAGCTCAC  15
+Template        1028097  T......T.......  1028111
+
+Reverse primer  1        ACCGCCCCAGTNAAACN  17
+Template        1029359  ...........T....T  1029343

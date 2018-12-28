@@ -1,0 +1,8 @@
+>NZ_CP012982.1 Burkholderia cepacia ATCC 25416 chromosome 2, complete sequence
+
+product length = 1149
+Forward primer  1        NGCGTAANAGCTCAC  15
+Template        1264758  A......T.......  1264744
+
+Reverse primer  1        ACCGCCCCAGTNAAACN  17
+Template        1263610  ...........C....T  1263626

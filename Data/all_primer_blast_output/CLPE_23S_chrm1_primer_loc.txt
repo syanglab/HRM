@@ -1,0 +1,64 @@
+>NC_008261.1 Clostridium perfringens ATCC 13124, complete genome
+
+product length = 1139
+Forward primer  1      NGCGTAANAGCTCAC  15
+Template        12993  T......T.......  13007
+
+Reverse primer  1      ACCGCCCCAGTNAAACN  17
+Template        14131  ...........C....T  14115
+
+
+product length = 1138
+Forward primer  1      NGCGTAANAGCTCAC  15
+Template        75376  T......T.......  75390
+
+Reverse primer  1      ACCGCCCCAGTNAAACN  17
+Template        76513  ...........C....T  76497
+
+
+product length = 1138
+Forward primer  1      NGCGTAANAGCTCAC  15
+Template        85207  T......T.......  85221
+
+Reverse primer  1      ACCGCCCCAGTNAAACN  17
+Template        86344  ...........C....T  86328
+
+
+product length = 1138
+Forward primer  1       NGCGTAANAGCTCAC  15
+Template        234258  T......T.......  234272
+
+Reverse primer  1       ACCGCCCCAGTNAAACN  17
+Template        235395  ...........C....T  235379
+
+
+product length = 1138
+Forward primer  1       NGCGTAANAGCTCAC  15
+Template        313524  T......T.......  313538
+
+Reverse primer  1       ACCGCCCCAGTNAAACN  17
+Template        314661  ...........C....T  314645
+
+
+product length = 1138
+Forward primer  1       NGCGTAANAGCTCAC  15
+Template        685974  T......T.......  685988
+
+Reverse primer  1       ACCGCCCCAGTNAAACN  17
+Template        687111  ...........C....T  687095
+
+
+product length = 1138
+Forward primer  1        NGCGTAANAGCTCAC  15
+Template        2780291  T......T.......  2780277
+
+Reverse primer  1        ACCGCCCCAGTNAAACN  17
+Template        2779154  ...........C....T  2779170
+
+
+product length = 1138
+Forward primer  1        NGCGTAANAGCTCAC  15
+Template        3031189  T......T.......  3031175
+
+Reverse primer  1        ACCGCCCCAGTNAAACN  17
+Template        3030052  ...........C....T  3030068

@@ -1,0 +1,81 @@
+>NZ_LS483441.1 Aeromonas caviae strain NCTC12244 genome assembly, chromosome: 1
+
+product length = 1165
+Forward primer  1      NGCGTAANAGCTCAC  15
+Template        78516  A......T.......  78530
+
+Reverse primer  1      ACCGCCCCAGTNAAACN  17
+Template        79680  ...........C....T  79664
+
+
+product length = 1165
+Forward primer  1       NGCGTAANAGCTCAC  15
+Template        310261  A......T.......  310275
+
+Reverse primer  1       ACCGCCCCAGTNAAACN  17
+Template        311425  ...........C....T  311409
+
+
+product length = 1165
+Forward primer  1       NGCGTAANAGCTCAC  15
+Template        381744  A......T.......  381758
+
+Reverse primer  1       ACCGCCCCAGTNAAACN  17
+Template        382908  ...........C....T  382892
+
+
+product length = 1165
+Forward primer  1       NGCGTAANAGCTCAC  15
+Template        808934  A......T.......  808948
+
+Reverse primer  1       ACCGCCCCAGTNAAACN  17
+Template        810098  ...........C....T  810082
+
+
+product length = 1165
+Forward primer  1        NGCGTAANAGCTCAC  15
+Template        3730845  A......T.......  3730831
+
+Reverse primer  1        ACCGCCCCAGTNAAACN  17
+Template        3729681  ...........C....T  3729697
+
+
+product length = 1165
+Forward primer  1        NGCGTAANAGCTCAC  15
+Template        3888387  A......T.......  3888373
+
+Reverse primer  1        ACCGCCCCAGTNAAACN  17
+Template        3887223  ...........C....T  3887239
+
+
+product length = 1165
+Forward primer  1        NGCGTAANAGCTCAC  15
+Template        4285817  A......T.......  4285803
+
+Reverse primer  1        ACCGCCCCAGTNAAACN  17
+Template        4284653  ...........C....T  4284669
+
+
+product length = 1165
+Forward primer  1        NGCGTAANAGCTCAC  15
+Template        4415453  A......T.......  4415439
+
+Reverse primer  1        ACCGCCCCAGTNAAACN  17
+Template        4414289  ...........C....T  4414305
+
+
+product length = 1165
+Forward primer  1        NGCGTAANAGCTCAC  15
+Template        4463518  A......T.......  4463504
+
+Reverse primer  1        ACCGCCCCAGTNAAACN  17
+Template        4462354  ...........C....T  4462370
+
+
+product length = 1165
+Forward primer  1        NGCGTAANAGCTCAC  15
+Template        4540984  A......T.......  4540970
+
+Reverse primer  1        ACCGCCCCAGTNAAACN  17
+Template        4539820  ...........C....T  4539836
+

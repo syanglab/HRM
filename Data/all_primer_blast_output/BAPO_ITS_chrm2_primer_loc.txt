@@ -1,0 +1,97 @@
+>NZ_CP002213.1 Paenibacillus polymyxa SC2, complete genome
+
+product length = 481
+Forward primer  1      TTGTACACACCGCCCG  16
+Template        13358  ................  13373
+
+Reverse primer  1      NGCCAAGGCATCCACC  16
+Template        13838  C...T........T..  13823
+
+
+product length = 408
+Forward primer  1       TTGTACACACCGCCCG  16
+Template        114544  ................  114559
+
+Reverse primer  1       NGCCAAGGCATCCACC  16
+Template        114951  C...T........T..  114936
+
+
+product length = 766
+Forward primer  1       TTGTACACACCGCCCG  16
+Template        182813  ................  182828
+
+Reverse primer  1       NGCCAAGGCATCCACC  16
+Template        183578  C...T........T..  183563
+
+
+product length = 408
+Forward primer  1       TTGTACACACCGCCCG  16
+Template        457154  ................  457169
+
+Reverse primer  1       NGCCAAGGCATCCACC  16
+Template        457561  C...T........T..  457546
+
+
+product length = 408
+Forward primer  1       TTGTACACACCGCCCG  16
+Template        468138  ................  468153
+
+Reverse primer  1       NGCCAAGGCATCCACC  16
+Template        468545  C...T........T..  468530
+
+
+product length = 408
+Forward primer  1       TTGTACACACCGCCCG  16
+Template        580308  ................  580323
+
+Reverse primer  1       NGCCAAGGCATCCACC  16
+Template        580715  C...T........T..  580700
+
+
+product length = 409
+Forward primer  1       TTGTACACACCGCCCG  16
+Template        756133  ................  756148
+
+Reverse primer  1       NGCCAAGGCATCCACC  16
+Template        756541  C...T........T..  756526
+
+
+product length = 422
+Forward primer  1       TTGTACACACCGCCCG  16
+Template        936528  ................  936543
+
+Reverse primer  1       NGCCAAGGCATCCACC  16
+Template        936949  C...T........T..  936934
+
+
+product length = 601
+Forward primer  1        TTGTACACACCGCCCG  16
+Template        2450271  ................  2450286
+
+Reverse primer  1        NGCCAAGGCATCCACC  16
+Template        2450871  C...T........T..  2450856
+
+
+product length = 601
+Forward primer  1        TTGTACACACCGCCCG  16
+Template        4344044  ................  4344029
+
+Reverse primer  1        NGCCAAGGCATCCACC  16
+Template        4343444  C...T........T..  4343459
+
+
+product length = 751
+Forward primer  1        TTGTACACACCGCCCG  16
+Template        4995480  ................  4995465
+
+Reverse primer  1        NGCCAAGGCATCCACC  16
+Template        4994730  C...T........T..  4994745
+
+
+product length = 551
+Forward primer  1        TTGTACACACCGCCCG  16
+Template        5062601  ................  5062586
+
+Reverse primer  1        NGCCAAGGCATCCACC  16
+Template        5062051  C...T........T..  5062066
+

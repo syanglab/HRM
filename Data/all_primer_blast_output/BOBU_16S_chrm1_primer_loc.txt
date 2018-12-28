@@ -1,0 +1,8 @@
+>NC_001318.1 Borrelia burgdorferi B31 chromosome, complete genome
+
+product length = 974
+Forward primer  1       GNGGCGNACGGGTGAGTAA  19
+Template        446029  .T....A............  446011
+
+Reverse primer  1       AGCTGACGACANCCATGCA  19
+Template        445056  ...........A.......  445074

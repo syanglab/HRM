@@ -1,0 +1,155 @@
+>NZ_CP011420.1 Paenibacillus polymyxa strain ATCC 15970, complete genome
+
+product length = 1154
+Features associated with this product:
+   rRNA-23S ribosomal RNA
+
+Forward primer  1      NGCGTAANAGCTCAC  15
+Template        14990  T......T.......  15004
+
+Reverse primer  1      ACCGCCCCAGTNAAACN  17
+Template        16143  ...........C....T  16127
+
+
+product length = 1154
+Features associated with this product:
+   rRNA-23S ribosomal RNA
+
+Forward primer  1       NGCGTAANAGCTCAC  15
+Template        116180  T......T.......  116194
+
+Reverse primer  1       ACCGCCCCAGTNAAACN  17
+Template        117333  ...........C....T  117317
+
+
+product length = 1154
+Features associated with this product:
+   rRNA-23S ribosomal RNA
+
+Forward primer  1       NGCGTAANAGCTCAC  15
+Template        186813  T......T.......  186827
+
+Reverse primer  1       ACCGCCCCAGTNAAACN  17
+Template        187966  ...........C....T  187950
+
+
+product length = 1154
+Features associated with this product:
+   rRNA-23S ribosomal RNA
+
+Forward primer  1       NGCGTAANAGCTCAC  15
+Template        420271  T......T.......  420285
+
+Reverse primer  1       ACCGCCCCAGTNAAACN  17
+Template        421424  ...........C....T  421408
+
+
+product length = 1156
+Features associated with this product:
+   rRNA-23S ribosomal RNA
+
+Forward primer  1       NGCGTAANAGCTCAC  15
+Template        928533  T......T.......  928547
+
+Reverse primer  1       ACCGCCCCAGTNAAACN  17
+Template        929688  ...........C....T  929672
+
+
+product length = 1154
+Features associated with this product:
+   rRNA-23S ribosomal RNA
+
+Forward primer  1        NGCGTAANAGCTCAC  15
+Template        1216091  T......T.......  1216105
+
+Reverse primer  1        ACCGCCCCAGTNAAACN  17
+Template        1217244  ...........C....T  1217228
+
+
+product length = 1154
+Features associated with this product:
+   rRNA-23S ribosomal RNA
+
+Forward primer  1        NGCGTAANAGCTCAC  15
+Template        2624675  T......T.......  2624689
+
+Reverse primer  1        ACCGCCCCAGTNAAACN  17
+Template        2625828  ...........C....T  2625812
+
+
+product length = 1154
+Features associated with this product:
+   rRNA-23S ribosomal RNA
+
+Forward primer  1        NGCGTAANAGCTCAC  15
+Template        2824005  T......T.......  2824019
+
+Reverse primer  1        ACCGCCCCAGTNAAACN  17
+Template        2825158  ...........C....T  2825142
+
+
+product length = 1154
+Features associated with this product:
+   rRNA-23S ribosomal RNA
+
+Forward primer  1        NGCGTAANAGCTCAC  15
+Template        4584037  T......T.......  4584023
+
+Reverse primer  1        ACCGCCCCAGTNAAACN  17
+Template        4582884  ...........C....T  4582900
+
+
+product length = 1153
+Features associated with this product:
+   rRNA-23S ribosomal RNA
+
+Forward primer  1        NGCGTAANAGCTCAC  15
+Template        4595371  T......T.......  4595357
+
+Reverse primer  1        ACCGCCCCAGTNAAACN  17
+Template        4594219  ...........C....T  4594235
+
+
+product length = 378
+Features associated with this product:
+   rRNA-23S ribosomal RNA
+
+Forward primer  1        NGCGTAANAGCTCAC  15
+Template        4966531  T......T.......  4966517
+
+Reverse primer  1        ACCGCCCCAGTNAAACN  17
+Template        4966154  ...........C....T  4966170
+
+
+product length = 1154
+Features associated with this product:
+   rRNA-23S ribosomal RNA
+
+Forward primer  1        NGCGTAANAGCTCAC  15
+Template        5286593  T......T.......  5286579
+
+Reverse primer  1        ACCGCCCCAGTNAAACN  17
+Template        5285440  ...........C....T  5285456
+
+
+product length = 1154
+Features associated with this product:
+   rRNA-23S ribosomal RNA
+
+Forward primer  1        NGCGTAANAGCTCAC  15
+Template        5354595  T......T.......  5354581
+
+Reverse primer  1        ACCGCCCCAGTNAAACN  17
+Template        5353442  ...........C....T  5353458
+
+
+product length = 1153
+Features associated with this product:
+   rRNA-23S ribosomal RNA
+
+Forward primer  1        NGCGTAANAGCTCAC  15
+Template        5357055  T......T.......  5357041
+
+Reverse primer  1        ACCGCCCCAGTNAAACN  17
+Template        5355903  ...........C....T  5355919
+

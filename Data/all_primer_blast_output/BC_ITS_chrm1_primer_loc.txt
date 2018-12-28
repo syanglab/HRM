@@ -1,0 +1,169 @@
+>NC_004722.1 Bacillus cereus ATCC 14579 chromosome, complete genome
+
+product length = 563
+Features associated with this product:
+   rRNA-16S ribosomal RNA
+
+   rRNA-23S ribosomal RNA
+
+Forward primer  1      TTGTACACACCGCCCG  16
+Template        10586  ................  10601
+
+Reverse primer  1      NGCCAAGGCATCCACC  16
+Template        11148  T.T.............  11133
+
+
+product length = 563
+Features associated with this product:
+   rRNA-16S ribosomal RNA
+
+   rRNA-23S ribosomal RNA
+
+Forward primer  1      TTGTACACACCGCCCG  16
+Template        30327  ................  30342
+
+Reverse primer  1      NGCCAAGGCATCCACC  16
+Template        30889  T.T.............  30874
+
+
+product length = 337
+Features associated with this product:
+   rRNA-16S ribosomal RNA
+
+   rRNA-23S ribosomal RNA
+
+Forward primer  1      TTGTACACACCGCCCG  16
+Template        83614  ................  83629
+
+Reverse primer  1      NGCCAAGGCATCCACC  16
+Template        83950  T.T.............  83935
+
+
+product length = 337
+Features associated with this product:
+   rRNA-16S ribosomal RNA
+
+   rRNA-23S ribosomal RNA
+
+Forward primer  1      TTGTACACACCGCCCG  16
+Template        89322  ................  89337
+
+Reverse primer  1      NGCCAAGGCATCCACC  16
+Template        89658  T.T.............  89643
+
+
+product length = 337
+Features associated with this product:
+   rRNA-16S ribosomal RNA
+
+   rRNA-23S ribosomal RNA
+
+Forward primer  1       TTGTACACACCGCCCG  16
+Template        152536  ................  152551
+
+Reverse primer  1       NGCCAAGGCATCCACC  16
+Template        152872  T.T.............  152857
+
+
+product length = 336
+Features associated with this product:
+   rRNA-16S ribosomal RNA
+
+   rRNA-23S ribosomal RNA
+
+Forward primer  1       TTGTACACACCGCCCG  16
+Template        246577  ................  246592
+
+Reverse primer  1       NGCCAAGGCATCCACC  16
+Template        246912  T.T.............  246897
+
+
+product length = 337
+Features associated with this product:
+   rRNA-16S ribosomal RNA
+
+   rRNA-23S ribosomal RNA
+
+Forward primer  1       TTGTACACACCGCCCG  16
+Template        267142  ................  267157
+
+Reverse primer  1       NGCCAAGGCATCCACC  16
+Template        267478  T.T.............  267463
+
+
+product length = 337
+Features associated with this product:
+   rRNA-16S ribosomal RNA
+
+   rRNA-23S ribosomal RNA
+
+Forward primer  1       TTGTACACACCGCCCG  16
+Template        274415  ................  274430
+
+Reverse primer  1       NGCCAAGGCATCCACC  16
+Template        274751  T.T.............  274736
+
+
+product length = 337
+Features associated with this product:
+   rRNA-16S ribosomal RNA
+
+   rRNA-23S ribosomal RNA
+
+Forward primer  1       TTGTACACACCGCCCG  16
+Template        287712  ................  287727
+
+Reverse primer  1       NGCCAAGGCATCCACC  16
+Template        288048  T.T.............  288033
+
+
+product length = 337
+Features associated with this product:
+   rRNA-16S ribosomal RNA
+
+   rRNA-23S ribosomal RNA
+
+Forward primer  1       TTGTACACACCGCCCG  16
+Template        294819  ................  294834
+
+Reverse primer  1       NGCCAAGGCATCCACC  16
+Template        295155  T.T.............  295140
+
+
+product length = 336
+Features associated with this product:
+   rRNA-16S ribosomal RNA
+
+   rRNA-23S ribosomal RNA
+
+Forward primer  1       TTGTACACACCGCCCG  16
+Template        511416  ................  511431
+
+Reverse primer  1       NGCCAAGGCATCCACC  16
+Template        511751  T.T.............  511736
+
+
+product length = 336
+Features associated with this product:
+   rRNA-16S ribosomal RNA
+
+   rRNA-23S ribosomal RNA
+
+Forward primer  1       TTGTACACACCGCCCG  16
+Template        719839  ................  719854
+
+Reverse primer  1       NGCCAAGGCATCCACC  16
+Template        720174  T.T.............  720159
+
+
+product length = 336
+Features associated with this product:
+   rRNA-23S ribosomal RNA
+
+   rRNA-16S ribosomal RNA
+
+Forward primer  1        TTGTACACACCGCCCG  16
+Template        4807249  ................  4807234
+
+Reverse primer  1        NGCCAAGGCATCCACC  16
+Template        4806914  T.T.............  4806929

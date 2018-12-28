@@ -1,0 +1,26 @@
+>NC_002929.2 Bordetella pertussis Tohama I chromosome, complete genome
+
+product length = 775
+Forward primer  1        TTGTACACACCGCCCG  16
+Template        2150422  ................  2150437
+
+Reverse primer  1        NGCCAAGGCATCCACC  16
+Template        2151196  C...............  2151181
+
+
+product length = 775
+Forward primer  1        TTGTACACACCGCCCG  16
+Template        2445825  ................  2445810
+
+Reverse primer  1        NGCCAAGGCATCCACC  16
+Template        2445051  C...............  2445066
+
+
+product length = 775
+Forward primer  1        TTGTACACACCGCCCG  16
+Template        3237377  ................  3237362
+
+Reverse primer  1        NGCCAAGGCATCCACC  16
+Template        3236603  C...............  3236618
+
+

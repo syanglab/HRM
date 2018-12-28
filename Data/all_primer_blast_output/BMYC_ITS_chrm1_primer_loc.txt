@@ -1,0 +1,156 @@
+>NZ_CP009692.1 Bacillus mycoides strain ATCC 6462, complete genome
+
+product length = 338
+Features associated with this product:
+   glutamate synthase
+
+   rRNA-16S ribosomal RNA
+
+Forward primer  1        TTGTACACACCGCCCG  16
+Template        1095736  ................  1095751
+
+Reverse primer  1        NGCCAAGGCATCCACC  16
+Template        1096073  T.T.............  1096058
+
+
+product length = 338
+Features associated with this product:
+   glutamate synthase
+
+   rRNA-23S ribosomal RNA
+
+Forward primer  1       TTGTACACACCGCCCG  16
+Template        200758  ................  200743
+
+Reverse primer  1       NGCCAAGGCATCCACC  16
+Template        200421  T.T.............  200436
+
+
+product length = 338
+Features associated with this product:
+   glutamate synthase
+
+   rRNA-23S ribosomal RNA
+
+Forward primer  1       TTGTACACACCGCCCG  16
+Template        208027  ................  208012
+
+Reverse primer  1       NGCCAAGGCATCCACC  16
+Template        207690  T.T.............  207705
+
+
+product length = 338
+Features associated with this product:
+   glutamate synthase
+
+   rRNA-23S ribosomal RNA
+
+Forward primer  1       TTGTACACACCGCCCG  16
+Template        218893  ................  218878
+
+Reverse primer  1       NGCCAAGGCATCCACC  16
+Template        218556  T.T.............  218571
+
+
+product length = 338
+Features associated with this product:
+   glutamate synthase
+
+   rRNA-23S ribosomal RNA
+
+Forward primer  1       TTGTACACACCGCCCG  16
+Template        239458  ................  239443
+
+Reverse primer  1       NGCCAAGGCATCCACC  16
+Template        239121  T.T.............  239136
+
+
+product length = 338
+Features associated with this product:
+   glutamate synthase
+
+   rRNA-23S ribosomal RNA
+
+Forward primer  1       TTGTACACACCGCCCG  16
+Template        338798  ................  338783
+
+Reverse primer  1       NGCCAAGGCATCCACC  16
+Template        338461  T.T.............  338476
+
+
+product length = 338
+Features associated with this product:
+   glutamate synthase
+
+   rRNA-23S ribosomal RNA
+
+Forward primer  1       TTGTACACACCGCCCG  16
+Template        401903  ................  401888
+
+Reverse primer  1       NGCCAAGGCATCCACC  16
+Template        401566  T.T.............  401581
+
+
+product length = 338
+Features associated with this product:
+   glutamate synthase
+
+   rRNA-23S ribosomal RNA
+
+Forward primer  1       TTGTACACACCGCCCG  16
+Template        407613  ................  407598
+
+Reverse primer  1       NGCCAAGGCATCCACC  16
+Template        407276  T.T.............  407291
+
+
+product length = 565
+Features associated with this product:
+   glutamate synthase
+
+   rRNA-23S ribosomal RNA
+
+Forward primer  1       TTGTACACACCGCCCG  16
+Template        461057  ................  461042
+
+Reverse primer  1       NGCCAAGGCATCCACC  16
+Template        460493  T.T.............  460508
+
+
+product length = 565
+Features associated with this product:
+   glutamate synthase
+
+   rRNA-23S ribosomal RNA
+
+Forward primer  1       TTGTACACACCGCCCG  16
+Template        480897  ................  480882
+
+Reverse primer  1       NGCCAAGGCATCCACC  16
+Template        480333  T.T.............  480348
+
+
+product length = 338
+Features associated with this product:
+   glutamate synthase
+
+   rRNA-23S ribosomal RNA
+
+Forward primer  1        TTGTACACACCGCCCG  16
+Template        5004496  ................  5004481
+
+Reverse primer  1        NGCCAAGGCATCCACC  16
+Template        5004159  T.T.............  5004174
+
+
+product length = 338
+Features associated with this product:
+   glutamate synthase
+
+   rRNA-23S ribosomal RNA
+
+Forward primer  1        TTGTACACACCGCCCG  16
+Template        5246842  ................  5246827
+
+Reverse primer  1        NGCCAAGGCATCCACC  16
+Template        5246505  T.T.............  5246520

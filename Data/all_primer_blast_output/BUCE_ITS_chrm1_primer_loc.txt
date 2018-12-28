@@ -1,0 +1,33 @@
+>NZ_CP012981.1 Burkholderia cepacia ATCC 25416 chromosome 1, complete sequence
+
+product length = 783
+Forward primer  1        TTGTACACACCGCCCG  16
+Template        1157844  ................  1157859
+
+Reverse primer  1        NGCCAAGGCATCCACC  16
+Template        1158626  C...............  1158611
+
+
+product length = 783
+Forward primer  1        TTGTACACACCGCCCG  16
+Template        1368733  ................  1368748
+
+Reverse primer  1        NGCCAAGGCATCCACC  16
+Template        1369515  C...............  1369500
+
+
+product length = 583
+Forward primer  1       TTGTACACACCGCCCG  16
+Template        886102  ................  886087
+
+Reverse primer  1       NGCCAAGGCATCCACC  16
+Template        885520  C...............  885535
+
+
+product length = 783
+Forward primer  1        TTGTACACACCGCCCG  16
+Template        3551477  ................  3551462
+
+Reverse primer  1        NGCCAAGGCATCCACC  16
+Template        3550695  C...............  3550710
+

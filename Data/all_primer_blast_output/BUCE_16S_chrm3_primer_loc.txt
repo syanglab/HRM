@@ -1,0 +1,8 @@
+>NZ_CP012983.1 Burkholderia cepacia ATCC 25416 chromosome 3, complete sequence
+
+product length = 970
+Forward primer  1       GNGGCGNACGGGTGAGTAA  19
+Template        175095  .T....A............  175077
+
+Reverse primer  1       AGCTGACGACANCCATGCA  19
+Template        174126  ...........G.......  174144

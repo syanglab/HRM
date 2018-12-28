@@ -1,0 +1,40 @@
+>NZ_LN831026.1 Corynebacterium diphtheriae genome assembly NCTC11397, chromosome : 1
+
+product length = 948
+Forward primer  1       GNGGCGNACGGGTGAGTAA  19
+Template        679236  .T....A............  679254
+
+Reverse primer  1       AGCTGACGACANCCATGCA  19
+Template        680183  ...........A.......  680165
+
+
+product length = 948
+Forward primer  1        GNGGCGNACGGGTGAGTAA  19
+Template        1151727  .T....A............  1151745
+
+Reverse primer  1        AGCTGACGACANCCATGCA  19
+Template        1152674  ...........A.......  1152656
+
+
+product length = 948
+Forward primer  1        GNGGCGNACGGGTGAGTAA  19
+Template        1899882  .T....A............  1899864
+
+Reverse primer  1        AGCTGACGACANCCATGCA  19
+Template        1898935  ...........A.......  1898953
+
+
+product length = 948
+Forward primer  1        GNGGCGNACGGGTGAGTAA  19
+Template        2178453  .T....A............  2178435
+
+Reverse primer  1        AGCTGACGACANCCATGCA  19
+Template        2177506  ...........A.......  2177524
+
+
+product length = 948
+Forward primer  1        GNGGCGNACGGGTGAGTAA  19
+Template        2348374  .T....A............  2348356
+
+Reverse primer  1        AGCTGACGACANCCATGCA  19
+Template        2347427  ...........A.......  2347445

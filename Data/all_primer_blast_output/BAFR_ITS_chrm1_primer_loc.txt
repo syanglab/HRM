@@ -1,0 +1,79 @@
+>NC_003228.3 Bacteroides fragilis NCTC 9343, complete genome
+
+product length = 665
+Features associated with this product:
+   rRNA-23S ribosomal RNA
+
+   rRNA-16S ribosomal RNA
+
+Forward primer  1        TTGTACACACCGCCCG  16
+Template        3205676  ................  3205661
+
+Reverse primer  1        NGCCAAGGCATCCACC  16
+Template        3205012  A............G..  3205027
+
+
+product length = 665
+Features associated with this product:
+   rRNA-23S ribosomal RNA
+
+   rRNA-16S ribosomal RNA
+
+Forward primer  1        TTGTACACACCGCCCG  16
+Template        3854815  ................  3854800
+
+Reverse primer  1        NGCCAAGGCATCCACC  16
+Template        3854151  A............G..  3854166
+
+
+product length = 665
+Features associated with this product:
+   rRNA-23S ribosomal RNA
+
+   rRNA-16S ribosomal RNA
+
+Forward primer  1        TTGTACACACCGCCCG  16
+Template        4414011  ................  4413996
+
+Reverse primer  1        NGCCAAGGCATCCACC  16
+Template        4413347  A............G..  4413362
+
+
+product length = 665
+Features associated with this product:
+   rRNA-23S ribosomal RNA
+
+   rRNA-16S ribosomal RNA
+
+Forward primer  1        TTGTACACACCGCCCG  16
+Template        4600487  ................  4600472
+
+Reverse primer  1        NGCCAAGGCATCCACC  16
+Template        4599823  A............G..  4599838
+
+
+product length = 671
+Features associated with this product:
+   rRNA-23S ribosomal RNA
+
+   rRNA-16S ribosomal RNA
+
+Forward primer  1        TTGTACACACCGCCCG  16
+Template        4658418  ................  4658403
+
+Reverse primer  1        NGCCAAGGCATCCACC  16
+Template        4657748  A............G..  4657763
+
+
+product length = 665
+Features associated with this product:
+   rRNA-23S ribosomal RNA
+
+   rRNA-16S ribosomal RNA
+
+Forward primer  1        TTGTACACACCGCCCG  16
+Template        5128566  ................  5128551
+
+Reverse primer  1        NGCCAAGGCATCCACC  16
+Template        5127902  A............G..  5127917
+

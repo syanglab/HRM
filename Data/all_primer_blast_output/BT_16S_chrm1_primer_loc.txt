@@ -1,0 +1,143 @@
+>NZ_CP021061.1 Bacillus thuringiensis strain ATCC 10792 chromosome, complete genome
+
+product length = 981
+Features associated with this product:
+   rRNA-23S ribosomal RNA
+
+   rRNA-16S ribosomal RNA
+
+Forward primer  1      GNGGCGNACGGGTGAGTAA  19
+Template        88891  .C....G............  88909
+
+Reverse primer  1      AGCTGACGACANCCATGCA  19
+Template        89871  ...........A.......  89853
+
+
+product length = 981
+Features associated with this product:
+   rRNA-23S ribosomal RNA
+
+   rRNA-16S ribosomal RNA
+
+Forward primer  1       GNGGCGNACGGGTGAGTAA  19
+Template        112008  .C....G............  112026
+
+Reverse primer  1       AGCTGACGACANCCATGCA  19
+Template        112988  ...........A.......  112970
+
+
+product length = 981
+Features associated with this product:
+   rRNA-23S ribosomal RNA
+
+   rRNA-16S ribosomal RNA
+
+Forward primer  1       GNGGCGNACGGGTGAGTAA  19
+Template        119242  .C....G............  119260
+
+Reverse primer  1       AGCTGACGACANCCATGCA  19
+Template        120222  ...........A.......  120204
+
+
+product length = 981
+Features associated with this product:
+   rRNA-23S ribosomal RNA
+
+   rRNA-16S ribosomal RNA
+
+Forward primer  1       GNGGCGNACGGGTGAGTAA  19
+Template        134657  .C....G............  134675
+
+Reverse primer  1       AGCTGACGACANCCATGCA  19
+Template        135637  ...........A.......  135619
+
+
+product length = 981
+Features associated with this product:
+   rRNA-23S ribosomal RNA
+
+   rRNA-16S ribosomal RNA
+
+Forward primer  1       GNGGCGNACGGGTGAGTAA  19
+Template        141809  .C....G............  141827
+
+Reverse primer  1       AGCTGACGACANCCATGCA  19
+Template        142789  ...........A.......  142771
+
+
+product length = 981
+Features associated with this product:
+   rRNA-23S ribosomal RNA
+
+   rRNA-16S ribosomal RNA
+
+Forward primer  1       GNGGCGNACGGGTGAGTAA  19
+Template        361681  .C....G............  361699
+
+Reverse primer  1       AGCTGACGACANCCATGCA  19
+Template        362661  ...........A.......  362643
+
+
+product length = 981
+Features associated with this product:
+   rRNA-23S ribosomal RNA
+
+   rRNA-16S ribosomal RNA
+
+Forward primer  1       GNGGCGNACGGGTGAGTAA  19
+Template        624307  .C....G............  624325
+
+Reverse primer  1       AGCTGACGACANCCATGCA  19
+Template        625287  ...........A.......  625269
+
+
+product length = 981
+Features associated with this product:
+   rRNA-23S ribosomal RNA
+
+   rRNA-16S ribosomal RNA
+
+Forward primer  1        GNGGCGNACGGGTGAGTAA  19
+Template        5350174  .C....G............  5350192
+
+Reverse primer  1        AGCTGACGACANCCATGCA  19
+Template        5351154  ...........A.......  5351136
+
+
+product length = 981
+Features associated with this product:
+   rRNA-23S ribosomal RNA
+
+   rRNA-16S ribosomal RNA
+
+Forward primer  1        GNGGCGNACGGGTGAGTAA  19
+Template        5369918  .C....G............  5369936
+
+Reverse primer  1        AGCTGACGACANCCATGCA  19
+Template        5370898  ...........A.......  5370880
+
+
+product length = 981
+Features associated with this product:
+   rRNA-23S ribosomal RNA
+
+   rRNA-16S ribosomal RNA
+
+Forward primer  1        GNGGCGNACGGGTGAGTAA  19
+Template        5423199  .C....G............  5423217
+
+Reverse primer  1        AGCTGACGACANCCATGCA  19
+Template        5424179  ...........A.......  5424161
+
+
+product length = 981
+Features associated with this product:
+   rRNA-23S ribosomal RNA
+
+   rRNA-16S ribosomal RNA
+
+Forward primer  1        GNGGCGNACGGGTGAGTAA  19
+Template        4716130  .C....G............  4716112
+
+Reverse primer  1        AGCTGACGACANCCATGCA  19
+Template        4715150  ...........A.......  4715168

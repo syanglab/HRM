@@ -1,0 +1,24 @@
+>NZ_LS483424.1 Bordetella parapertussis strain NCTC10520 genome assembly, chromosome: 1
+
+product length = 1152
+Forward primer  1       NGCGTAANAGCTCAC  15
+Template        669527  A......T.......  669541
+
+Reverse primer  1       ACCGCCCCAGTNAAACN  17
+Template        670678  ...........C....T  670662
+
+
+product length = 1152
+Forward primer  1        NGCGTAANAGCTCAC  15
+Template        2161183  A......T.......  2161169
+
+Reverse primer  1        ACCGCCCCAGTNAAACN  17
+Template        2160032  ...........C....T  2160048
+
+
+product length = 1152
+Forward primer  1        NGCGTAANAGCTCAC  15
+Template        2902136  A......T.......  2902122
+
+Reverse primer  1        ACCGCCCCAGTNAAACN  17
+Template        2900985  ...........C....T  2901001

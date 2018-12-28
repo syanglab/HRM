@@ -1,0 +1,49 @@
+>NZ_CP018871.1 Acinetobacter haemolyticus strain TJS01, complete genome
+
+product length = 897
+Forward primer  1      TTGTACACACCGCCCG  16
+Template        20512  ................  20527
+
+Reverse primer  1      NGCCAAGGCATCCACC  16
+Template        21408  T...............  21393
+
+
+product length = 791
+Forward primer  1       TTGTACACACCGCCCG  16
+Template        527477  ................  527492
+
+Reverse primer  1       NGCCAAGGCATCCACC  16
+Template        528267  T...............  528252
+
+
+product length = 929
+Forward primer  1        TTGTACACACCGCCCG  16
+Template        2648078  ................  2648063
+
+Reverse primer  1        NGCCAAGGCATCCACC  16
+Template        2647150  T...............  2647165
+
+
+product length = 930
+Forward primer  1        TTGTACACACCGCCCG  16
+Template        2849917  ................  2849902
+
+Reverse primer  1        NGCCAAGGCATCCACC  16
+Template        2848988  T...............  2849003
+
+
+product length = 778
+Forward primer  1        TTGTACACACCGCCCG  16
+Template        3234609  ................  3234594
+
+Reverse primer  1        NGCCAAGGCATCCACC  16
+Template        3233832  T...............  3233847
+
+
+product length = 930
+Forward primer  1        TTGTACACACCGCCCG  16
+Template        3396546  ................  3396531
+
+Reverse primer  1        NGCCAAGGCATCCACC  16
+Template        3395617  T...............  3395632
+

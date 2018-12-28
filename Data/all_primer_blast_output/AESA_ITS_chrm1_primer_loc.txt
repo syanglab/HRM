@@ -1,0 +1,33 @@
+>NZ_CP014160.1 Aerococcus sanguinicola strain CCUG43001, complete genome
+
+product length = 610
+Forward primer  1       TTGTACACACCGCCCG  16
+Template        980164  ................  980179
+
+Reverse primer  1       NGCCAAGGCATCCACC  16
+Template        980773  T..........T....  980758
+
+
+product length = 610
+Forward primer  1        TTGTACACACCGCCCG  16
+Template        1492298  ................  1492313
+
+Reverse primer  1        NGCCAAGGCATCCACC  16
+Template        1492907  T..........T....  1492892
+
+
+product length = 405
+Forward primer  1       TTGTACACACCGCCCG  16
+Template        195305  ................  195290
+
+Reverse primer  1       NGCCAAGGCATCCACC  16
+Template        194901  T..........T....  194916
+
+
+product length = 405
+Forward primer  1       TTGTACACACCGCCCG  16
+Template        750091  ................  750076
+
+Reverse primer  1       NGCCAAGGCATCCACC  16
+Template        749687  T..........T....  749702
+
