@@ -1,8 +1,0 @@
->NC_000922.1 Chlamydophila pneumoniae CWL029 chromosome, complete genome
-
-product length = 1167
-Forward primer  1        NGCGTAANAGCTCAC  15
-Template        1003480  T......C.......  1003494
-
-Reverse primer  1        ACCGCCCCAGTNAAACN  17
-Template        1004646  ...........A....T  1004630
