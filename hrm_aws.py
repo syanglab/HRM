@@ -6,20 +6,16 @@ Created on Fri Nov 22 20:13:19 2019
 """
 
 import os
-from keras.layers import Input, Dense, Dropout, BatchNormalization, concatenate, Flatten, dot
-from keras.layers import Conv1D, UpSampling1D, Activation, Lambda, TimeDistributed, Bidirectional, Reshape
+from keras.layers import Input, Dense, concatenate
 from keras.layers.advanced_activations import LeakyReLU
 from keras.models import Model
 from keras.optimizers import Adam
-from keras.layers.recurrent import LSTM
-import keras.backend as K
 import numpy as np
-
-from keras.layers.merge import _Merge
-from IPython.display import clear_output
 import matplotlib.pyplot as plt
-from keras.layers.advanced_activations import LeakyReLU
 from sklearn.model_selection import KFold
+import sqlite3
+import io
+
 
 def output_plt(seqs, curves, ids, generator):
     '''
@@ -27,18 +23,14 @@ def output_plt(seqs, curves, ids, generator):
     '''
     for i in range(0,len(curves)):
     
-        of = '%s_curves.pdf' % ids[i][:-1]
+        of = '%s_v3_curves.pdf' % ids[i]
         
         #Plot the actual curve
         plt.plot(np.arange(80.1,95.0,0.1), curves[i], label='Experimental',color='red')
 
         #Plot the pred_curve
         gen_images = generator.predict([np.array([seqs[i]])])
-        plt.plot(np.arange(80.1,95.0,0.1), gen_images[0], label='Pred',color='blue')
-        
-        #Plot the umelt curve
-        crv = np.load('%s_umelt_mat.npy' % ids[i][:-1])
-        plt.plot(np.arange(80.1,95.0,0.1), crv, label='UMelt',color='green')
+        plt.plot(np.arange(80.1,95.0,0.1), gen_images[0], label='Pred',color='blue')        
         
         #Show the plot
         plt.ylabel('Dissociation')
@@ -50,13 +42,13 @@ def output_plt(seqs, curves, ids, generator):
         plt.savefig(of)
         
         #Export
-        os.system("aws s3 cp %s s3://dxoracle1/hrm/%s" % (of,of))
+        os.system("aws s3 cp %s s3://bucketname/%s" % (of,of))
 
 def adam_optimizer():
     return Adam(lr=0.0002, beta_1=0.5)
 
-def build_generator():
-    seq_input = Input(shape = (214,))
+def build_generator(seq_len):
+    seq_input = Input(shape = (seq_len,))
     first = Dense(256)(seq_input)
     first = LeakyReLU(0.2)(first)
     
@@ -75,9 +67,9 @@ def build_generator():
     return gen
 
     
-def build_discriminator():
-    curve_input = Input(shape = (150,))
-    seq_input = Input(shape = (214,))
+def build_discriminator(curve_len, seq_len):
+    curve_input = Input(shape = (curve_len,))
+    seq_input = Input(shape = (seq_len,))
     dis_input = concatenate([curve_input, seq_input])
     first = Dense(1028)(dis_input)
     first = LeakyReLU(0.2)(first)
@@ -96,11 +88,11 @@ def build_discriminator():
     
     return dis
 
-def build_gan(discriminator, generator):
+def build_gan(discriminator, generator, seq_len):
     
     discriminator.trainable=False
     
-    gan_input = Input(shape=(214,))
+    gan_input = Input(shape=(seq_len,))
     
     x = generator(gan_input)
     
@@ -111,10 +103,58 @@ def build_gan(discriminator, generator):
     
     return gan
 
+def adapt_array(arr):
+    out = io.BytesIO()
+    np.save(out, arr)
+    out.seek(0)
+    return sqlite3.Binary(out.read())
+
+def convert_array(text):
+    out = io.BytesIO(text)
+    out.seek(0)
+    return np.load(out)
+
+
 #Load the data
-seqs = np.load('seq_mat_half.npy')
-curves = np.load('curve_mat_half.npy')
-ids = np.load('id_mat_half.npy')
+sqlite3.register_adapter(np.ndarray, adapt_array)
+sqlite3.register_converter("array", convert_array)
+conn = sqlite3.connect('HRM_syang.sqlite', detect_types=sqlite3.PARSE_DECLTYPES)
+cur = conn.cursor()
+#Convert the sequences to numpy vectors
+base_enc = {
+    'A':0.25,
+    'T':0.5,
+    'C':0.75,
+    'G':1.0,
+    'N':(0.25 + 0.5 + 0.75 + 1.00)/4,
+    'M':(0.75 + 0.25)/2,
+    'Y':(0.5 + 0.75)/2,
+    'X':(0.25 + 0.5 + 0.75 + 1.00)/4,
+    '-':0.0,
+    'S':(1.0 + 0.75)/2  
+}
+
+sql_command = """
+SELECT raw_sequences.org_id, aligned_sequences.sequence, curves.norm_curve
+FROM curves
+INNER JOIN raw_sequences ON aligned_sequences.seq_id=raw_sequences.id
+INNER JOIN aligned_sequences ON curves.seq_id=aligned_sequences.seq_id;
+"""
+curve_mat = []
+seq_mat = []
+tag_mat = []
+cur.execute(sql_command)
+data = cur.fetchall()
+for d in data:
+    curve_mat.append(d[2])
+    seq_mat.append([base_enc[base] for base in d[1]])
+    tag_mat.append(d[0])
+curves = np.array(curve_mat)/100
+seqs = np.array(seq_mat)
+ids = np.array(tag_mat)
+
+curve_len = curves.shape[1]
+seq_len = seqs.shape[1]
 
 #Split the data for a loocv
 kf = KFold(n_splits=len(curves))
@@ -130,12 +170,12 @@ for train_index, test_index in kf.split(seqs):
     print('Testing %s' % str(ids_test[0]))
     
     # Creating GAN
-    generator= build_generator()
-    discriminator= build_discriminator()
-    gan = build_gan(discriminator, generator)
+    generator= build_generator(seq_len)
+    discriminator= build_discriminator(curve_len, seq_len)
+    gan = build_gan(discriminator, generator, seq_len)
     
 
-    for e in range(200):
+    for e in range(50000):
         #Predict curves
         gen_images = generator.predict([seqs_train])
 
@@ -169,8 +209,8 @@ for train_index, test_index in kf.split(seqs):
     
     #Outut the matrices
     gen_images_test = generator.predict([seqs_test])
-    of = '%s_pred_curve.npy' % ids_test[0][:-1]
+    of = '%s_v3_pred_curve.npy' % ids_test[0]
     np.save(of, gen_images_test)
     
     #Export
-    os.system("aws s3 cp %s s3://dxoracle1/hrm/%s" % (of,of))
+    os.system("aws s3 cp %s s3://bucketname/%s" % (of,of))
