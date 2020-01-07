@@ -1,0 +1,18 @@
+CLUSTAL 2.1 multiple sequence alignment
+
+
+VIVU1_F         ------------------------------------------------------------
+VIVU1_R         CCAGACTCCTACGGGAGGCAGCAGTGGGGAATATTGCACAATGGGCGCAAGCCTGATGCA
+                                                                            
+
+VIVU1_F         ----TGCCGCGTGTATGAAGAAGGCCTTNCGGGTTGTAAAGTACTTTCAGCAGTGAGGAA
+VIVU1_R         GCCATGCCGCGTGTATGAAGAAGGCCTTC-GGGTTGTAAAGTACTTTCAGCAGTGAGGAA
+                    ************************  ******************************
+
+VIVU1_F         GGAGGTATCGTTAATAGCGGTATCTTTTGACGTTAGCTGCAGAAGAAGCACCGGCTAACT
+VIVU1_R         GGAGGTATCGTTAATAGCGGTATCTTT-GACGTAAGCTGC--------------------
+                *************************** ***** ******                    
+
+VIVU1_F         CCGTGCCAGCAGCCGCGGTAATACG
+VIVU1_R         -------------------------
+                                         
