@@ -40,7 +40,7 @@ def output_plt(seqs, curves, ids, generator):
         plt.tight_layout()
         plt.title('%s' % ids[i][:-1])
         plt.savefig(of)
-        
+        plt.close()
         #Export
         os.system("aws s3 cp %s s3://bucketname/%s" % (of,of))
 
