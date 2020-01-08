@@ -45,7 +45,7 @@ def output_plt(seqs, curves, ids, generator):
         os.system("aws s3 cp %s s3://bucketname/%s" % (of,of))
 
 def adam_optimizer():
-    return Adam(lr=0.0002, beta_1=0.5)
+    return Adam(lr=0.0002, beta_1=0.5, clipnorm=1.0)
 
 def build_generator(seq_len):
     seq_input = Input(shape = (seq_len,))
