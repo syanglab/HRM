@@ -4,7 +4,14 @@ Created on Thu Jan  2 12:17:19 2020
 
 @author: cogillsb
 """
-import pandas as pd
+
+from scipy.signal import hilbert
+import numpy as np
+from sklearn.preprocessing import MinMaxScaler
+import math
+from sklearn import metrics
+from scipy import signal
+import itertools
 
 
 def format_raw_hrm(raw_curve_fn, org_list_fn):
@@ -76,6 +83,110 @@ def norm_curve(curve, temps, norm_len):
         new_curve[i] = min(new_curve) 
     
     return new_curve
+
+
+
+
+def calc_distance(target,test):
+    '''
+    Distance between vectors
+    ''' 
+    def equalize(target,test):
+        d=len(target)-len(test)
+        if d>0:
+            target=target[:-d]
+        if d<0:
+            d = abs(d)
+            test=test[:-d]
+        return target, test
+    
+    def get_shift(ys):
+        ks=list(ys.keys())    
+        for tk in ks:
+            if tk == ks[0]:
+                continue
+            shift = np.argmax(signal.correlate(ys[ks[0]], ys[tk])) - (len(ys[tk])-1)        
+            if shift>0:            
+                #Shift test to the right
+                for k in ks:
+                    if k != tk:
+                        ys[k]=ys[k][shift:]
+                ys[tk]=ys[tk][:-shift]
+            if shift<0:
+                shift=abs(shift)
+                #Shift test to the left
+                for k in ks:
+                    if k != tk:
+                        ys[k]=ys[k][:-shift]
+                ys[tk]=ys[tk][shift:]
+
+        return ys
+    
+    def norm(ys):
+        for key, val in ys.items():
+            val = np.array(val)
+            ys[key] = (val - val.min()) / (val.max() - val.min())
+        return ys
+
+    #target,test = equalize(target,test)
+    ys = {'target':target,'test':test}
+    #ys = norm(ys)
+    #ys = get_shift(ys)
+    
+    target=ys['target']
+    test=ys['test']
+    #target,test = new_shift(target,test)
+    target = signal.detrend(target)
+    test = signal.detrend(test)
+    target_h = np.imag(hilbert(target))
+    test_h = np.imag(hilbert(test))
+    #convert to numpy arrays
+    target = np.array(test)
+    test = np.array(test)
+    target_h = np.array(target_h)
+    test_h = np.array(test_h)
+    
+    dist = np.linalg.norm(target-test) + np.linalg.norm(target_h-test_h)
+    
+    return dist
+
+def smooth(x,window_len=11,window='hanning'):
+   
+    l = len(x)
+    if x.ndim != 1:
+        raise ValueError ("smooth only accepts 1 dimension arrays.")
+
+    if x.size < window_len:
+        raise ValueError ("Input vector needs to be bigger than window size.")
+
+
+    if window_len<3:
+        return x
+    
+    if not window in ['flat', 'hanning', 'hamming', 'bartlett', 'blackman']:
+        raise ValueError ("Window is on of 'flat', 'hanning', 'hamming', 'bartlett', 'blackman'")
+
+
+    s=np.r_[x[window_len-1:0:-1],x,x[-2:-window_len-1:-1]]
+    #print(len(s))
+    if window == 'flat': #moving average
+        w=np.ones(window_len,'d')
+    else:
+        w=eval('np.'+window+'(window_len)')
+
+    y=np.convolve(w/w.sum(),s,mode='valid')
+    
+    cut = len(y)-l
+    y = y[int(cut/2):-round(cut/2)]
+
+            
+    return y
+
+
+
+
+
+
         
 
         
