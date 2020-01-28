@@ -111,7 +111,7 @@ def output_plt(seqs, rev_seqs, umelt, curves, ids, generator, tag):
     plt.savefig(of)
     plt.close()
     #Export
-    os.system("aws s3 cp %s s3://dxoracle1/hrm/v3/run_2/%s" % (of,of))
+    os.system("aws s3 cp %s s3://dxoracle1/hrm/v3_run2/%s" % (of,of))
 
 def adam_optimizer():
     return Adam(lr=0.0002, beta_1=0.5, clipnorm=1.0)
@@ -305,6 +305,14 @@ for tg in ['AECA','ENCL', 'ENDU', 'ENGA', 'ESCO']:
     #Outut the matrices
     gen_images_test = generator.predict([seqs_test])
     of = '%s_v3_pred_curve.npy' % ids_test[0]
+    np.save(of, gen_images_test)
+    
+    #Export
+    os.system("aws s3 cp %s s3://dxoracle1/hrm/v3_run2/%s" % (of,of))
+    
+    #Outut the matrices
+    gen_images_test = generator.predict([rev_seqs_test])
+    of = '%s_v3_rev_pred_curve.npy' % ids_test[0]
     np.save(of, gen_images_test)
     
     #Export
