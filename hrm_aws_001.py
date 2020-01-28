@@ -111,12 +111,12 @@ def output_plt(seqs, rev_seqs, umelt, curves, ids, generator, tag):
     plt.savefig(of)
     plt.close()
     #Export
-    os.system("aws s3 cp %s s3://bucketname/%s" % (of,of))
+    os.system("aws s3 cp %s s3://dxoracle1/hrm/v3/run_2/%s" % (of,of))
 
 def adam_optimizer():
     return Adam(lr=0.0002, beta_1=0.5, clipnorm=1.0)
 
-def build_generator(seq_len):
+def build_generator(curve_len, seq_len):
     seq_input = Input(shape = (seq_len,))
     first = Dense(256)(seq_input)
     first = LeakyReLU(0.2)(first)
@@ -127,7 +127,7 @@ def build_generator(seq_len):
     third = Dense(1028)(second)
     third = LeakyReLU(.2)(third)
     
-    out = Dense(150)(third)
+    out = Dense(curve_len)(third)
     out = LeakyReLU(.2)(out)
     
     gen = Model([seq_input,], out)
@@ -187,7 +187,7 @@ def convert_array(text):
 #Load the data
 sqlite3.register_adapter(np.ndarray, adapt_array)
 sqlite3.register_converter("array", convert_array)
-conn = sqlite3.connect('HRM/HRM_syang.sqlite', detect_types=sqlite3.PARSE_DECLTYPES)
+conn = sqlite3.connect('HRM_syang.sqlite', detect_types=sqlite3.PARSE_DECLTYPES)
 cur = conn.cursor()
 #Convert the sequences to numpy vectors
 base_enc = {
@@ -235,6 +235,8 @@ seq_len = seqs.shape[1]
 #Split the data for a loocv
 kf = KFold(n_splits=len(curves))
 
+
+
 #Run each fold
 for train_index, test_index in kf.split(seqs):
     
@@ -248,12 +250,12 @@ for train_index, test_index in kf.split(seqs):
     print('Testing %s' % str(ids_test[0]))
     
     # Creating GAN
-    generator= build_generator(seq_len)
+    generator= build_generator(curve_len, seq_len)
     discriminator= build_discriminator(curve_len, seq_len)
     gan = build_gan(discriminator, generator, seq_len)
     
 
-    for e in range(50000):
+    for e in range(250000):
         #Predict curves
         gen_images = generator.predict([seqs_train])
         rev_gen_images = generator.predict([rev_seqs_train])
@@ -302,4 +304,4 @@ for train_index, test_index in kf.split(seqs):
     np.save(of, gen_images_test)
     
     #Export
-    os.system("aws s3 cp %s s3://bucketname/%s" % (of,of))
+    os.system("aws s3 cp %s s3://dxoracle1/hrm/v3_run2/%s" % (of,of))
